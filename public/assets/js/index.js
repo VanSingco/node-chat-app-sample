@@ -9,6 +9,7 @@ socket.on('disconnect', function () {
 });
 
 socket.on('newMessage', function(msg){
+    const formattedTime = moment(msg.createdAt).format('h:mm a');
     console.log('Got new message', msg)
     $('#messages').append(
         `<li class="chat-room_chat--user-chat-1">
@@ -16,8 +17,11 @@ socket.on('newMessage', function(msg){
                 <span data-toggle="tooltip" data-placement="top" title="${msg.from}">
                     <img src="./assets/img/profile-default.jpg" class="m-2" alt="">
                 </span>
-                <div class="chat-text d-flex align-items-center align-self-center">
-                        <p>${msg.text}</p>   
+                <div class="mt-2">
+                     <div class="chat-text d-flex align-items-center align-self-center">
+                         <p>${msg.text}</p>   
+                     </div>
+                    <small class="mt-2 float-right mr-3">${formattedTime}</small>
                 </div>
             </div>
         </li>`
@@ -25,16 +29,20 @@ socket.on('newMessage', function(msg){
 });
 
 socket.on('newLocationMessage', function(msg){
+    const formattedTime = moment(msg.createdAt).format('h:mm a');
     $('#messages').append(
         `<li class="chat-room_chat--user-chat-1">
             <div class="d-flex chat-room__chat--user-chat-1__user">
                 <span data-toggle="tooltip" data-placement="top" title="${msg.from}">
                     <img src="./assets/img/profile-default.jpg" class="m-2" alt="">
                 </span>
-                <div class="chat-text d-flex align-items-center align-self-center">
-                    <a target="_blank" href="${msg.url}">
-                        <p>my current location</p>
-                    </a>   
+                <div class="mt-2">
+                    <div class="chat-text d-flex align-items-center align-self-center">
+                        <a target="_blank" href="${msg.url}">
+                            <p>my current location</p>
+                        </a>   
+                     </div>
+                    <small class="mt-2 float-right mr-3">${formattedTime}</small>
                 </div>
             </div>
         </li>`
