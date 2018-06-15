@@ -1,0 +1,183 @@
+/* line 1, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/abstract/_variables.scss */
+:root {
+  --color-primary: #7646ff;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f8f9fa;
+  --color-grey-light-3: #E3E6F4;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --color-danger: #EF4136;
+  --color-success: #18BC9C;
+  --color-warning: #F9CB40;
+  --shadow-dark-2: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  --shadow-dark-1: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-dark-3: 0 2px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  --shadow-dark-4: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15);
+  --gradiant-primary: linear-gradient(to right bottom, #8d54e9, #4777e6);
+}
+
+/* line 1, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/layouts/_nav.scss */
+.bg-white {
+  background-color: #fff;
+  box-shadow: var(--shadow-dark-1);
+}
+
+/* line 6, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/layouts/_nav.scss */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+  box-shadow: var(--shadow-dark-1);
+}
+
+/* line 1, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.user-list {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/mountain.jpeg);
+}
+
+/* line 8, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.user-list__item {
+  background-color: transparent;
+  color: #fff;
+  padding: .7rem 1rem;
+  list-style: none;
+  transition: all .2s ease-in-out;
+}
+
+/* line 14, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.user-list__item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* line 17, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.user-list__item--photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+/* line 24, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.user-list .search-user--form {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: transparent;
+}
+
+/* line 31, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room {
+  background-color: #f8f9fa;
+}
+
+/* line 36, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat {
+  height: 80vh;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px 10px 20px;
+}
+
+/* line 41, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--chat-area {
+  padding: 10px;
+}
+
+/* line 44, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat ul {
+  list-style: none;
+}
+
+/* line 49, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-1__user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/* line 54, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-1__user .chat-text {
+  background-color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  box-shadow: var(--shadow-dark-1);
+}
+
+/* line 59, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-1__user .chat-text p {
+  margin: 0;
+  padding: 3px 10px;
+}
+
+/* line 68, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-2__user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/* line 73, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-2__user .chat-text {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  box-shadow: var(--shadow-dark-1);
+}
+
+/* line 79, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__chat--user-chat-2__user .chat-text p {
+  margin: 0;
+  padding: 3px 10px;
+}
+
+/* line 87, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__form {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: var(--shadow-dark-1);
+}
+
+/* line 94, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__form .chat-textarea {
+  border: 1px solid transparent !important;
+  background-color: #fff;
+}
+
+/* line 97, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__form .chat-textarea:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* line 102, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__form .chat-btn {
+  background-color: #fff;
+  z-index: 1;
+  color: var(--color-grey-dark-2);
+}
+
+/* line 106, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.chat-room__form .chat-btn i {
+  font-size: 1.5rem;
+}
+
+/* line 112, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/pages/_chat.scss */
+.form-group {
+  margin-bottom: 0rem;
+}
+
+/* line 12, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/main.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 18, C:/Users/vansi/Desktop/learn_node/node-chat-app/public/assets/sass/main.scss */
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+/*# sourceMappingURL=../css/main.map */

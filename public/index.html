@@ -5,11 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <h1>Welcom to chat app</h1>
+    <!-- nav bar section -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#">Chatify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav section end -->
 
+    <section class="chat">
+        <div class="d-flex">
+            <div class="col-lg-3 user-list p-0">
+                <div class="search-user p-3 mt-4">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control search-user--form" placeholder="Search users">           
+                        </div>
+                    </form>
+                </div>
+                <ul class="d-flex flex-column p-0 m-0">
+                    <li class="user-list__item">
+                        <div class="media">
+                            <img class="mr-3 user-list__item--photo" src="./assets/img/profile-default.jpg" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="mt-1">Vansingco</h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-list__item">
+                        <div class="media">
+                            <img class="mr-3 user-list__item--photo" src="./assets/img/profile-default.jpg" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="mt-1">Vansingco</h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-list__item">
+                        <div class="media">
+                            <img class="mr-3 user-list__item--photo" src="./assets/img/profile-default.jpg" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="mt-1">Vansingco</h6>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 chat-room p-0">
+               <div class="d-flex flex-column p-0 m-0">
+                   <div class="chat-room__nav">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                </ul>
+                        </nav>
+                   </div>
+
+                   <div class="chat-room__chat flex-grow">
+                    <div class="chat-room_chat--chat-area">
+                        <ul class="d-flex flex-column p-0" id="messages">
+                           <!-- <li class="chat-room_chat--user-chat-1">
+                            <div class="d-flex chat-room__chat--user-chat-1__user">
+                                <img src="./assets/img/profile-default.jpg" class="m-2" alt="">
+                                <div class="chat-text d-flex align-items-center align-self-center">
+                                     <p>hello adasdsadadad</p>   
+                                </div>
+                            </div>
+                           </li>
+                            <li class="chat-room__chat--user-chat-2__user ml-md-auto">
+                                <div class="d-flex chat-room__chat--user-chat-2__user">
+                                    <div class="chat-text d-flex align-items-center align-self-center">
+                                        <p>hey bro</p>
+                                    </div>
+                                    <img src="./assets/img/profile-default.jpg" class="m-2" alt="">
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                   </div>
+
+                   <div class="chat-room__form p-2">
+                    <form id="message-form" class="">
+                        <div class="form-group d-flex">
+                            <input name="message" type="text" class="form-control chat-textarea" placeholder="Typea message">
+                           <div class="">
+                                <button type="submit" class="btn chat-btn">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </button>
+                           </div>
+                        </div>
+                    </form>
+                   </div>
+               </div> 
+            </div>
+            <div class="col-lg-3">
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                Tooltip on top
+            </button>
+
+            </div>
+        </div>
+    </section>
+    
     <script src="/socket.io/socket.io.js"></script>
+    <script src="assets/js/plugin/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/plugin/bootstrap.min.js" ></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 </html>

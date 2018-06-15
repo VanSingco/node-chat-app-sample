@@ -1,0 +1,20 @@
+@import "abstract/_variables";
+
+@import "component/form";
+@import "component/button";
+
+@import "layouts/header";
+@import "layouts/nav";
+@import "layouts/footer";
+
+@import "pages/chat";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
