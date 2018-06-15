@@ -114,10 +114,14 @@
                     <form id="message-form" class="">
                         <div class="form-group d-flex">
                             <input name="message" type="text" class="form-control chat-textarea" placeholder="Typea message">
-                           <div class="">
+                           <div class="d-flex">
+                                <button type="button" id="send-location" class="btn chat-btn" data-toggle="tooltip" data-placement="top" title="Send to location">
+                                     <i class="fas fa-map-marker-alt"></i>
+                                </button>
                                 <button type="submit" class="btn chat-btn">
                                     <i class="fab fa-telegram-plane"></i>
                                 </button>
+
                            </div>
                         </div>
                     </form>
@@ -125,7 +129,7 @@
                </div> 
             </div>
             <div class="col-lg-3">
-            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Sent to location">
                 Tooltip on top
             </button>
 
